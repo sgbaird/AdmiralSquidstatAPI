@@ -1,0 +1,4 @@
+# PySide6 dependencies for SquidstatPyLibrary
+# Note: SquidstatPyLibrary wheel has hardcoded PySide6 URLs that conflict with PyPI.
+# We install PySide6 from PyPI first, then install the wheel with --no-deps.
+PySide6==6.7.3
