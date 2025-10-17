@@ -26,6 +26,13 @@ To install the Python API (Linux):
 
 Note: The `--no-deps` flag is required because the wheel contains hardcoded PySide6 URLs that conflict with PyPI packages. PySide6 is installed separately via requirements.txt.
 
+For device access on Linux systems, you may also need to:
+- Add your user to the dialout group: `sudo usermod -a -G dialout $USER`
+- Set up udev rules (see `SquidstatLibrary/Linux/install_dependencies.sh` for details)
+- Restart your computer for changes to take effect
+
+These device permissions are only needed when connecting to actual Squidstat hardware.
+
 ### C++ API
 
 The most convenient way to build and run the API and the provided examples is to utilize CMake with the CMake files we provide. After downloading the SquidstatLibrary folder, open it with an IDE with CMake support. For example, with Visual Studio 2019, if you have the C++ package installed with CMake, you can open the folder and the IDE will generate the project for you automatically. To then run any of the provided examples, set that example as the 'start up item'.
